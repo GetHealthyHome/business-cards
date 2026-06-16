@@ -1,203 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Business Card</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Healthy Home Energy & Consulting | Digital Business Card</title>
+    
+    <!-- Google Fonts & Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fafaf4",
+                        "on-tertiary-fixed": "#002114",
+                        "on-surface": "#1a1c19",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#205100",
+                        "tertiary-container": "#83ad97",
+                        "on-primary-fixed": "#092100",
+                        "secondary-container": "#bdf05d",
+                        "outline-variant": "#bfcab3",
+                        "inverse-primary": "#7edd47",
+                        "tertiary": "#3f6653",
+                        "secondary-fixed-dim": "#a5d646",
+                        "on-tertiary-container": "#194130",
+                        "primary": "#2d6c00",
+                        "on-secondary-fixed-variant": "#364e00",
+                        "inverse-on-surface": "#f1f1ec",
+                        "on-tertiary-fixed-variant": "#274e3d",
+                        "tertiary-fixed": "#c1ecd4",
+                        "surface-container-low": "#f4f4ee",
+                        "on-secondary-container": "#4c6c00",
+                        "surface-container-highest": "#e3e3de",
+                        "secondary-fixed": "#c0f35f",
+                        "primary-fixed": "#99fa61",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#2d6c00",
+                        "surface-variant": "#e3e3de",
+                        "inverse-surface": "#2f312e",
+                        "surface-container-high": "#e8e8e3",
+                        "surface": "#fafaf4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#194300",
+                        "surface-container": "#eeeee9",
+                        "primary-container": "#5db924",
+                        "on-secondary-fixed": "#131f00",
+                        "surface-bright": "#fafaf4",
+                        "on-background": "#1a1c19",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#486800",
+                        "surface-dim": "#dadad5",
+                        "tertiary-fixed-dim": "#a5d0b9",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#7edd47",
+                        "outline": "#707a66",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#404a38"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Inter"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"]
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* Base styles optimized for mobile phones */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
         }
-
-        /* Your Custom Card Design Wrapper */
-        .card-container {
-            background: #ffffff;
-            width: 90%;
-            max-width: 400px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            text-align: center;
-            padding-bottom: 30px;
-            position: relative;
-        }
-
-        /* Top branding green wave graphic and profile picture */
-        .brand-header-graphics {
-            /* Link your green wave graphic image here */
-            background-image: url('assets/green-wave-background.png');
-            background-size: cover;
-            background-position: center;
-            height: 180px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            padding-bottom: 20px;
-        }
-
-        .profile-picture {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .profile-picture img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Logo Area */
-        .logo-area {
-            position: relative;
-            padding-left: 20px;
-            margin-top: -100px;
-            margin-bottom: 30px;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-        }
-
-        .partner-logo {
-            width: 60px; /* BPI-GoldStar Contractor Logo */
-            margin-right: 15px;
-        }
-
-        .healthy-home-logo {
-            width: 150px; /* Healthy Home Energy & Consulting Logo */
-        }
-
-        /* Profile Details styling */
-        .profile-info {
-            padding: 0 20px;
-        }
-
-        h1 {
-            margin: 10px 0 5px 0;
-            font-size: 24px;
-            color: #333333;
-        }
-
-        p.title {
-            margin: 0 0 25px 0;
-            color: #666666;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Contact details section */
-        .contact-details {
-            text-align: left;
-            margin: 0 auto;
-            max-width: 320px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
-            color: #333333;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .contact-item .icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: #55b637; /* Icon background color */
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 12px;
-            font-size: 18px;
-        }
-
-        /* The science of comfort tagline */
-        .tagline {
-            margin-top: 25px;
-            font-size: 14px;
-            color: #666666;
-            font-style: italic;
-        }
-
-        /* Updated Action Button Styling (matches the image buttons) */
-        .action-btn {
-            display: block;
-            width: 80%;
-            margin: 12px auto;
-            padding: 12px;
-            background-color: #55b637; /* Use your brand green color */
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-
-        .action-btn:hover {
-            background-color: #3f9027; /* Darker shade for hover effect */
-        }
-
-        .error-message {
-            color: red;
-            padding: 20px;
+        .hero-gradient {
+            background: linear-gradient(135deg, #A7D948 0%, #5DB924 100%);
         }
     </style>
 </head>
-<body>
+<body class="text-on-surface font-body-md overflow-x-hidden bg-white">
 
-    <div class="card-container">
-        <div class="brand-header-graphics">
-            <div class="profile-picture">
-                <img id="user-pfp" src="assets/profile-placeholders/user.jpg" alt="Profile Picture">
+    <!-- Top Banner with Graphics and Wave overlays -->
+    <section class="relative hero-gradient pt-20 pb-40 flex flex-col items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0vlunmfuivX0_qlKrJo2DSRLgNu1r4LbPuOj7GmipEF27SFMAVQkgF2CSsA9Mg7SDeyamlXDm9TTEHcnl8kbU967jD0L7Zk5yOpr-X9YUFFIQK6TcnfVMIs0-R4T2vesPInkcXIOgJCwJFpYsY7TsFwgRFk9onhnDeEywKpl16nlA8SyHTnopFtvJEd_5B4enF5AY_HhFnObeENowYus1EOWsPWXYH9zL8ZdoUmqZlEbJvxH-EAitKgUT7cyqrMUnyxD1MnLDYNlJ" class="w-full h-full object-cover" alt="Background Background Wave Pattern">
+            <div class="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
+            
+            <!-- Left Side Badges Area -->
+            <div class="absolute bottom-8 left-8 z-20 bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-sm border border-white/20 max-w-[100px] md:max-w-[140px]">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7hfwY6EEyuYBgcFqRGl5HySIMZ29eGOQQAJzOZz8bYcydgvH-i__TQCIDdeyHDwObWyd1-mOS6F78KEHu2d38aY1zkT_exlyJgcUudh21StEs3yg2JSu3Q_TgJQhaRpYIZ3RyfXR9JOU9YaBsNFlYaGQ5x-JArQ6nRDaoYndu4hUHIqrPco_PrWtgVKmt5lfDZoUL_oyleYyO_1TKd9xHQi5qDkhrt4-d8-Gqsv6do1ZgQsLTCDEDCjZ_HmG56eQnY5abZMrtAC4b" alt="BPI GoldStar Contractor Logo Badge" class="w-full h-auto object-contain">
             </div>
         </div>
 
-        <div class="logo-area">
-            <img src="assets/bpi-partner-logo.png" class="partner-logo" alt="BPI Partner Logo">
-            <img src="assets/healthy-home-logo.png" class="healthy-home-logo" alt="Healthy Home Energy & Consulting Logo">
+        <!-- Dynamic Circular Profile Pic Frame Container -->
+        <div class="relative z-10 w-48 h-48 md:w-64 md:h-64 rounded-full border-8 border-white/20 shadow-2xl overflow-hidden ring-4 ring-primary-container/30 bg-white">
+            <img id="user-pfp" alt="Employee Profile Photo Frame" class="w-full h-full object-cover" src="https://via.placeholder.com/300">
         </div>
-        
-        <div class="profile-info">
-            <h1 id="user-name">Loading...</h1>
-            <p id="user-title" class="title"></p>
+    </section>
 
-            <div class="contact-details">
-                <a id="link-email" href="#" class="contact-item">
-                    <span class="icon">&#9993;</span> <span id="txt-email"></span>
-                </a>
-                <a id="link-phone-local" href="#" class="contact-item">
-                    <span class="icon">&#9743;</span> <span id="txt-phone-local"></span>
-                </a>
-                <a id="link-phone-mobile" href="#" class="contact-item">
-                    <span class="icon">&#128241;</span> <span id="txt-phone-mobile"></span>
-                </a>
-                <a id="link-website" href="#" class="contact-item">
-                    <span class="icon">&#127760;</span> <span id="txt-website"></span>
+    <main class="pb-24">
+        <!-- Main Core Details Content Block Container -->
+        <section class="px-margin-mobile -mt-12 relative z-10 max-w-container-max mx-auto text-center">
+            
+            <!-- Brand Identity Header Layout Blocks -->
+            <div class="mb-6 flex flex-col items-center">
+                <div class="mb-4">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7g58HlCQgdM0iAY1AfnpDyPzXCBGtMrZzteOOjGoRH9tryrG_PLEaU3qJpKTzwln1Zj5uIZJ2x8TDT6KvUTvA3cdF8BACdlrDaYqZiSrTObeJRwFx3HbG5dW0eAoyBebze62ZIkR1p2eHlcCFiSA43CXCCikpUR5mkim7yMz0BLZspQmVSiFOC1ZSNNaA6l_lvYAFZA7YfDPVHDg5u2fVbo24nUT0Hrh-Axd2rk9d6fmXUTxwpSG6hMEF7CawroIP1ZjuQ8bVShy4" alt="Healthy Home Energy & Consulting Logo Title Mark" class="h-16 w-auto object-contain mx-auto">
+                </div>
+                <h1 id="user-name" class="text-on-surface mb-2 font-headline-lg text-headline-lg font-bold tracking-tight">Loading...</h1>
+                <p id="user-title" class="font-body-lg text-body-lg text-primary font-semibold"></p>
+            </div>
+
+            <!-- New Download Contact Card .vcf Button Component -->
+            <div class="mb-10 max-w-sm mx-auto px-4">
+                <a id="btn-vcard" href="#" download class="flex items-center justify-center gap-2 w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:bg-primary/90 active:scale-98 transition-all duration-200">
+                    <span class="material-symbols-outlined">badge</span>
+                    <span>Save Contact Details</span>
                 </a>
             </div>
 
-            <a id="btn-vcard" href="#" class="action-btn" download>Download Contact</a>
+            <!-- Contact Communications Options Bento Links Block Container Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 max-w-4xl mx-auto px-4">
+                <!-- Email Option Box Container -->
+                <a id="link-email" class="group flex flex-row items-center gap-4 transition-all duration-300 active:scale-95 p-4 border border-outline-variant/30 rounded-2xl bg-white shadow-sm" href="#">
+                    <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform shrink-0">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+                    </div>
+                    <div class="text-left overflow-hidden">
+                        <p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5 uppercase tracking-wider">Email</p>
+                        <p id="txt-email" class="font-body-md text-body-md font-bold text-on-surface break-all"></p>
+                    </div>
+                </a>
 
-            <p class="tagline">The science of comfort. Proven in your home.</p>
-        </div>
-    </div>
+                <!-- Phone Office Container -->
+                <a id="link-phone-office" class="group flex flex-row items-center p-4 transition-all duration-300 active:scale-95 gap-4 border border-outline-variant/30 rounded-2xl bg-white shadow-sm" href="#">
+                    <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform shrink-0">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5 uppercase tracking-wider">Office</p>
+                        <p id="txt-phone-office" class="font-body-md text-body-md font-bold text-on-surface">914-242-9733</p>
+                    </div>
+                </a>
 
+                <!-- Phone Mobile Box Item Container -->
+                <a id="link-phone-mobile" class="group flex flex-row items-center p-4 transition-all duration-300 active:scale-95 gap-4 border border-outline-variant/30 rounded-2xl bg-white shadow-sm" href="#">
+                    <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform shrink-0">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_android</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5 uppercase tracking-wider">Mobile</p>
+                        <p id="txt-phone-mobile" class="font-body-md text-body-md font-bold text-on-surface"></p>
+                    </div>
+                </a>
+
+                <!-- Corporate External Website Link -->
+                <a id="link-website" class="group flex flex-row items-center p-4 transition-all duration-300 active:scale-95 gap-4 border border-outline-variant/30 rounded-2xl bg-white shadow-sm" href="https://www.gethealthyhome.com" target="_blank">
+                    <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform shrink-0">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">public</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5 uppercase tracking-wider">Visit Website</p>
+                        <p id="txt-website" class="font-body-md text-body-md font-bold text-on-surface">www.gethealthyhome.com</p>
+                    </div>
+                </a>
+            </div>
+
+            <p class="text-center font-semibold text-on-surface-variant italic text-body-md tracking-wide mt-4">
+                The science of comfort. Proven in your home.
+            </p>
+        </section>
+
+        <!-- Services Capabilities Bento Showcase Sub-Grid View section Container -->
+        <section class="mt-16 px-margin-mobile max-w-container-max mx-auto mb-16">
+            <h3 class="font-headline-lg text-headline-lg text-on-surface mb-8 text-center font-bold">Our Expertise</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto px-4">
+                <a href="https://www.gethealthyhome.com/service/the-healthy-home-approach/" class="bg-surface-container-high rounded-2xl p-4 flex flex-col justify-between aspect-square transition-all duration-300 hover:ring-2 hover:ring-primary/20 group">
+                    <span class="material-symbols-outlined text-4xl text-primary">analytics</span>
+                    <div>
+                        <p class="font-bold text-on-surface leading-tight text-sm">Energy Audits</p>
+                        <p class="text-xs text-on-surface-variant mt-0.5">Performance analysis</p>
+                    </div>
+                </a>
+                <a href="https://www.gethealthyhome.com/service/performance-based-air-sealing/" class="bg-secondary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square transition-all duration-300 hover:ring-2 hover:ring-primary/20 group">
+                    <span class="material-symbols-outlined text-4xl text-on-secondary-fixed">air</span>
+                    <p class="font-bold text-on-secondary-fixed leading-tight text-sm">Air Sealing Solutions</p>
+                </a>
+                <a href="https://www.gethealthyhome.com/service-category/insulation-air-sealing/" class="bg-tertiary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square transition-all duration-300 hover:ring-2 hover:ring-primary/20 group">
+                    <span class="material-symbols-outlined text-4xl text-on-tertiary-fixed">thermostat</span>
+                    <p class="font-bold text-on-tertiary-fixed leading-tight text-sm">Thermal Insulation</p>
+                </a>
+                <div class="bg-secondary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square">
+                    <span class="material-symbols-outlined text-4xl text-on-secondary-fixed">hvac</span>
+                    <p class="font-bold text-on-secondary-fixed leading-tight text-sm">Cold Climate Heat Pumps</p>
+                </div>
+                <div class="bg-tertiary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square">
+                    <span class="material-symbols-outlined text-4xl text-on-tertiary-fixed">verified</span>
+                    <p class="font-bold text-on-tertiary-fixed leading-tight text-sm">Healthy Home Comfort Club</p>
+                </div>
+                <div class="bg-tertiary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square">
+                    <span class="material-symbols-outlined text-4xl text-on-tertiary-fixed">health_and_safety</span>
+                    <div>
+                        <p class="font-bold text-on-tertiary-fixed leading-tight text-sm">Indoor Air Quality</p>
+                        <p class="text-xs text-on-tertiary-fixed/80 mt-0.5">Breathe easier with healthy air</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Connect external JavaScript file routing logic -->
     <script src="script.js"></script>
 </body>
 </html>
