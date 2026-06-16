@@ -42,7 +42,7 @@ async function loadProfile() {
             // Sync User Portrait Headshot File or pull fallback on-error
             const pfpElement = document.getElementById('user-pfp');
             if (pfpElement) {
-                pfpElement.src = `assets/profiles/${username.toLowerCase()}.jpg`;
+                pfpElement.src = `assets/profiles/${username.toLowerCase()}.png`;
                 pfpElement.onerror = function() {
                     this.src = "https://via.placeholder.com/300?text=Healthy+Home+Team"; 
                 };
