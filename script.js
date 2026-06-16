@@ -1,74 +1,69 @@
 async function loadProfile() {
     try {
-        // 1. Look at the URL and find the value after "?user="
+        // 1. Read string following "?user=" parameter query
         const urlParams = new URLSearchParams(window.location.search);
-        const username = urlParams.get('user');
+        let username = urlParams.get('user');
 
-        // If no user is specified in the URL, default to 'andrew' for testing
+        // Fallback default profile if empty parameter
         if (!username) {
-            window.location.search = '?user=andrew';
-            return;
+            username = 'andrew';
         }
 
-        // 2. Grab the profiles.json database file
+        // 2. Fetch data storage file
         const response = await fetch('profiles.json');
+        if (!response.ok) {
+            throw new Error(`Could not access 'profiles.json'. Server Status: ${response.status}`);
+        }
         const data = await response.json();
 
-        // 3. Find the specific individual's data packet
+        // 3. Extract requested object model 
         const profile = data[username.toLowerCase()];
 
         if (profile) {
-            // 4. Update the HTML elements with our data strings
+            // 4. Safely inject contents into matching tags
+            document.getElementById('user-name').innerText = profile.name || "Healthy Home Representative";
+            document.getElementById('user-title').innerText = profile.title || "Specialist";
             
-            // a. Update Profile Picture
-            document.getElementById('user-pfp').src = `assets/profiles/${username}.jpg`;
-            document.getElementById('user-pfp').alt = `${profile.name}'s Profile Picture`;
-
-            // b. Update Name and Title
-            document.getElementById('user-name').innerText = profile.name;
-            document.getElementById('user-title').innerText = profile.title;
-            
-            // c. Update Contact details and links
+            // Communication hooks assignment
             document.getElementById('link-email').href = `mailto:${profile.email}`;
-            document.getElementById('txt-email').innerText = profile.email;
+            document.getElementById('txt-email').innerText = profile.email || "";
 
-            // Update Phone Local (if available) - assuming this info is provided for real data
-            if (profile.phoneLocal) {
-                document.getElementById('link-phone-local').href = `tel:${profile.phoneLocal}`;
-                document.getElementById('txt-phone-local').innerText = profile.phoneLocal;
-            } else {
-                // Hide if not provided
-                document.getElementById('link-phone-local').style.display = 'none';
-            }
-
-            // Update Phone Mobile
             document.getElementById('link-phone-mobile').href = `tel:${profile.phone}`;
-            document.getElementById('txt-phone-mobile').innerText = profile.phone;
+            document.getElementById('txt-phone-mobile').innerText = profile.phone || "";
 
-            // Update Website
-            document.getElementById('link-website').href = `https://${profile.website || 'gethealthyhome.com'}`;
-            document.getElementById('txt-website').innerText = profile.website || 'www.gethealthyhome.com';
-
-            // d. Update the .vcf download button link
+            // Bind the custom vCard text configuration down link block
             if (profile.vcard) {
                 document.getElementById('btn-vcard').href = profile.vcard;
+                document.getElementById('btn-vcard').style.display = 'flex';
             } else {
-                // Disable button if vcard is missing
                 document.getElementById('btn-vcard').style.display = 'none';
             }
 
+            // Sync User Portrait Headshot File or pull fallback on-error
+            const pfpElement = document.getElementById('user-pfp');
+            if (pfpElement) {
+                pfpElement.src = `assets/profiles/${username.toLowerCase()}.jpg`;
+                pfpElement.onerror = function() {
+                    this.src = "https://via.placeholder.com/300?text=Healthy+Home+Team"; 
+                };
+            }
+
         } else {
-            // Error handling if a link is typed incorrectly
-            document.getElementById('user-name').innerText = "Profile Not Found";
-            document.getElementById('user-title').innerText = "Please check the link configuration.";
-            // Hide normal content on error
-            document.querySelector('.contact-details').style.display = 'none';
+            // Error handling if targeted path is invalid
+            document.getElementById('user-name').innerText = "Profile Registration Missing";
+            document.getElementById('user-title').innerText = `No user data available matching key: "${username}"`;
             document.getElementById('btn-vcard').style.display = 'none';
         }
+
     } catch (error) {
-        console.error("Error pulling database profile elements:", error);
+        console.error("Critical Exception Encountered:", error);
+        document.body.innerHTML = `
+            <div style="color:#ba1a1a; padding:40px; text-align:center; font-family:sans-serif;">
+                <h2>Configuration Alert</h2>
+                <p>${error.message}</p>
+                <p>Verify that your <b>profiles.json</b> dataset file is committed to your primary root repository directory folder.</p>
+            </div>`;
     }
 }
 
-// Fire off the function immediately when the page loads
 window.onload = loadProfile;
