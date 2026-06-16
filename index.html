@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card</title>
+    <style>
+        /* Base styles optimized for mobile phones */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Your Custom Card Design Wrapper */
+        .card-container {
+            background: #ffffff;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 30px;
+            position: relative;
+        }
+
+        /* Top branding green wave graphic and profile picture */
+        .brand-header-graphics {
+            /* Link your green wave graphic image here */
+            background-image: url('assets/green-wave-background.png');
+            background-size: cover;
+            background-position: center;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 20px;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Logo Area */
+        .logo-area {
+            position: relative;
+            padding-left: 20px;
+            margin-top: -100px;
+            margin-bottom: 30px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+        }
+
+        .partner-logo {
+            width: 60px; /* BPI-GoldStar Contractor Logo */
+            margin-right: 15px;
+        }
+
+        .healthy-home-logo {
+            width: 150px; /* Healthy Home Energy & Consulting Logo */
+        }
+
+        /* Profile Details styling */
+        .profile-info {
+            padding: 0 20px;
+        }
+
+        h1 {
+            margin: 10px 0 5px 0;
+            font-size: 24px;
+            color: #333333;
+        }
+
+        p.title {
+            margin: 0 0 25px 0;
+            color: #666666;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Contact details section */
+        .contact-details {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 320px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #333333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .contact-item .icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #55b637; /* Icon background color */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        /* The science of comfort tagline */
+        .tagline {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666666;
+            font-style: italic;
+        }
+
+        /* Updated Action Button Styling (matches the image buttons) */
+        .action-btn {
+            display: block;
+            width: 80%;
+            margin: 12px auto;
+            padding: 12px;
+            background-color: #55b637; /* Use your brand green color */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .action-btn:hover {
+            background-color: #3f9027; /* Darker shade for hover effect */
+        }
+
+        .error-message {
+            color: red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="brand-header-graphics">
+            <div class="profile-picture">
+                <img id="user-pfp" src="assets/profile-placeholders/user.jpg" alt="Profile Picture">
+            </div>
+        </div>
+
+        <div class="logo-area">
+            <img src="assets/bpi-partner-logo.png" class="partner-logo" alt="BPI Partner Logo">
+            <img src="assets/healthy-home-logo.png" class="healthy-home-logo" alt="Healthy Home Energy & Consulting Logo">
+        </div>
+        
+        <div class="profile-info">
+            <h1 id="user-name">Loading...</h1>
+            <p id="user-title" class="title"></p>
+
+            <div class="contact-details">
+                <a id="link-email" href="#" class="contact-item">
+                    <span class="icon">&#9993;</span> <span id="txt-email"></span>
+                </a>
+                <a id="link-phone-local" href="#" class="contact-item">
+                    <span class="icon">&#9743;</span> <span id="txt-phone-local"></span>
+                </a>
+                <a id="link-phone-mobile" href="#" class="contact-item">
+                    <span class="icon">&#128241;</span> <span id="txt-phone-mobile"></span>
+                </a>
+                <a id="link-website" href="#" class="contact-item">
+                    <span class="icon">&#127760;</span> <span id="txt-website"></span>
+                </a>
+            </div>
+
+            <a id="btn-vcard" href="#" class="action-btn" download>Download Contact</a>
+
+            <p class="tagline">The science of comfort. Proven in your home.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
