@@ -2,84 +2,91 @@
   "kevin": {
     "name": "Kevin Brenner",
     "title": "Founder + President",
-    "phone": "329 208 4733",
+    "phone": "329-208-4733",
     "email": "kbrenner@gethealthyhome.com",
     "vcard": "assets/vcards/kevin.vcf"
   },
   "jon": {
     "name": "Jonathan Davey",
     "title": "General Manager + Partner",
-    "phone": "914 960 7464",
+    "phone": "914-960-7464",
+    "email": "jdavey@gethealthyhome.com",
+    "vcard": "assets/vcards/jon.vcf"
+  },
+  "jon2": {
+    "name": "Jonathan Davey",
+    "title": "Healthy Home Specialist",
+    "phone": "914-960-7464",
     "email": "jdavey@gethealthyhome.com",
     "vcard": "assets/vcards/jon.vcf"
   },
   "matt": {
     "name": "Matt Corning",
     "title": "Technical Field Manager",
-    "phone": "329 208 4927",
+    "phone": "329-208-4927",
     "email": "mcorning@gethealthyhome.com",
     "vcard": "assets/vcards/matt.vcf"
   },
   "hayden": {
     "name": "Hayden Carnaghi",
     "title": "Healthy Home Specialist",
-    "phone": "329 208 4820",
+    "phone": "329-208-4820",
     "email": "hcarnaghi@gethealthyhome.com",
     "vcard": "assets/vcards/hayden.vcf"
   },
   "conrad": {
     "name": "Conrad Kopp",
     "title": "Healthy Home Specialist",
-    "phone": "329 208 4749",
+    "phone": "329-208-4749",
     "email": "ckopp@gethealthyhome.com",
     "vcard": "assets/vcards/conrad.vcf"
   },
   "tipa": {
     "name": "Jonathan Tipa",
     "title": "HVAC Manager",
-    "phone": "329 208 6397",
+    "phone": "329-208-6397",
     "email": "jtipa@gethealthyhome.com",
     "vcard": "assets/vcards/tipa.vcf"
   },
   "adam": {
     "name": "Adam DiClerico",
     "title": "Team Leader",
-    "phone": "329 208 4895",
+    "phone": "329-208-4895",
     "email": "adiclerico@gethealthyhome.com",
     "vcard": "assets/vcards/adam.vcf"
   },
   "danny": {
     "name": "Danny Andrade",
     "title": "Team Leader",
-    "phone": "329 208 4727",
+    "phone": "329-208-4727",
     "email": "dandrade@gethealthyhome.com",
     "vcard": "assets/vcards/danny.vcf"
   },
   "mario": {
     "name": "Mario Leiva",
     "title": "Team Leader",
-    "phone": "329 208 xxxx",
+    "phone": "329-208 xxxx",
     "email": "mleiva@gethealthyhome.com",
     "vcard": "assets/vcards/mario.vcf"
   },
   "ande": {
     "name": "Ande Holcombe",
     "title": "Operations Manager",
-    "phone": "203 940 2710",
+    "phone": "203-940-2710",
     "email": "aholcombe@gethealthyhome.com",
     "vcard": "assets/vcards/ande.vcf"
   },
   "diana": {
     "name": "Diana Martinez",
     "title": "Office Manager",
-    "phone": "914 242 9733",
+    "phone": "914-242-9733",
     "email": "dmartinez@gethealthyhome.com",
     "vcard": "assets/vcards/diana.vcf"
       },
   "juliette": {
     "name": "Juliette Intrieri",
     "title": "CSR",
-    "phone": "914 242 9733",
+    "phone": "914-242-9733",
     "email": "jintrieri@gethealthyhome.com",
     "vcard": "assets/vcards/juliette.vcf"
   }
