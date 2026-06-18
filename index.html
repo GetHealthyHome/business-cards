@@ -5,10 +5,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Healthy Home Energy & Consulting | Digital Business Card</title>
     
-    <!-- Google Fonts & Material Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -89,24 +87,20 @@
 </head>
 <body class="text-on-surface font-body-md overflow-x-hidden bg-white">
 
-    <!-- Top Banner with Graphics and Wave overlays -->
     <section class="relative hero-gradient pt-20 pb-40 flex flex-col items-center justify-center">
         <div class="absolute inset-0 z-0">
             <img src="assets/green-wave-bpi.png" class="w-full h-full object-cover" alt="Background Background Wave Pattern">
             <div class="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
         </div>
 
-        <!-- Dynamic Circular Profile Pic Frame Container -->
         <div class="relative z-10 w-48 h-48 md:w-64 md:h-64 rounded-full border-8 border-white/20 shadow-2xl overflow-hidden ring-4 ring-primary-container/30 bg-white">
             <img id="user-pfp" alt="Employee Profile Photo Frame" class="w-full h-full object-cover" src="https://via.placeholder.com/300">
         </div>
     </section>
 
     <main class="pb-24">
-        <!-- Main Core Details Content Block Container -->
         <section class="px-margin-mobile -mt-12 relative z-10 max-w-container-max mx-auto text-center">
             
-            <!-- Brand Identity Header Layout Blocks -->
             <div class="mb-6 mt-8 flex flex-col items-center">
                 <div class="mb-4 mt-4">
                     <img src="assets/healthy-home-logo26.png" alt="Healthy Home Energy & Consulting Logo Title Mark" class="h-16 w-auto object-contain mx-auto">
@@ -115,19 +109,13 @@
                 <p id="user-title" class="font-body-lg text-body-lg text-primary font-semibold"></p>
             </div>
 
-            <!-- New Download Contact Card .vcf Button Component -->
-            <div class="mb-10 max-w-sm mx-auto px-4 flex flex-col gap-3">
-                <a id="btn-vcard" href="#" download class="flex items-center justify-center gap-2 w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:bg-primary/90 active:scale-98 transition-all duration-200">
-                    <span class="material-symbols-outlined">badge</span>
-                    <span>Save Contact Details</span>
-
             <div class="mb-10 max-w-sm mx-auto px-4 flex flex-col gap-3">
                 <a id="btn-vcard" href="#" download class="flex items-center justify-center gap-2 w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:bg-primary/90 active:scale-98 transition-all duration-200">
                     <span class="material-symbols-outlined">badge</span>
                     <span>Save Contact Details</span>
                 </a>
             
-               <a href="https://search.google.com/local/writereview?placeid=ChIJw8_p6wunwokR8m-xXf76Q3M" target="_blank" class="flex flex-col items-center justify-center gap-1 w-full py-3 bg-amber-400 text-amber-950 font-bold rounded-xl shadow-md hover:bg-amber-500 active:scale-98 transition-all duration-200">
+                <a href="https://search.google.com/local/writereview?placeid=ChIJw8_p6wunwokR8m-xXf76Q3M" target="_blank" class="flex flex-col items-center justify-center gap-1 w-full py-3 bg-amber-400 text-amber-950 font-bold rounded-xl shadow-md hover:bg-amber-500 active:scale-98 transition-all duration-200">
                     <div class="flex justify-center text-amber-950">
                         <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 20px;">star</span>
                         <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 20px;">star</span>
@@ -139,9 +127,7 @@
                 </a>
             </div>
 
-            <!-- Contact Communications Options Bento Links Block Container Grid Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 max-w-4xl mx-auto px-4">
-                <!-- Email Option Box Container -->
                 <a id="link-email" class="group flex flex-row items-center gap-4 transition-all duration-300 active:scale-95 p-4 border border-outline-variant/30 rounded-2xl bg-white shadow-sm" href="#">
                     <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform shrink-0">
                         <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
@@ -152,7 +138,6 @@
                     </div>
                 </a>
 
-                <!-- Phone Office Container -->
                 <a id="link-phone-office" class="group flex flex-row items-center p-4 transition-all duration-300 active:scale-95 gap-4 border border-outline-variant/30 rounded-2xl bg-white shadow-sm" href="#">
                     <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform shrink-0">
                         <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
@@ -163,73 +148,9 @@
                     </div>
                 </a>
 
-                <!-- Phone Mobile Box Item Container -->
                 <a id="link-phone-mobile" class="group flex flex-row items-center p-4 transition-all duration-300 active:scale-95 gap-4 border border-outline-variant/30 rounded-2xl bg-white shadow-sm" href="#">
                     <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform shrink-0">
                         <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_android</span>
                     </div>
                     <div class="text-left">
                         <p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5 uppercase tracking-wider">Mobile</p>
-                        <p id="txt-phone-mobile" class="font-body-md text-body-md font-bold text-on-surface"></p>
-                    </div>
-                </a>
-
-                <!-- Corporate External Website Link -->
-                <a id="link-website" class="group flex flex-row items-center p-4 transition-all duration-300 active:scale-95 gap-4 border border-outline-variant/30 rounded-2xl bg-white shadow-sm" href="https://www.gethealthyhome.com" target="_blank">
-                    <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform shrink-0">
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">public</span>
-                    </div>
-                    <div class="text-left">
-                        <p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5 uppercase tracking-wider">Visit Website</p>
-                        <p id="txt-website" class="font-body-md text-body-md font-bold text-on-surface">www.gethealthyhome.com</p>
-                    </div>
-                </a>
-            </div>
-
-            <p class="text-center font-semibold text-on-surface-variant italic text-body-md tracking-wide mt-4">
-                The science of comfort. Proven in your home.
-            </p>
-        </section>
-
-        <!-- Services Capabilities Bento Showcase Sub-Grid View section Container -->
-        <section class="mt-16 px-margin-mobile max-w-container-max mx-auto mb-16">
-            <h3 class="font-headline-lg text-headline-lg text-on-surface mb-8 text-center font-bold">Our Expertise</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto px-4">
-                <a href="https://www.gethealthyhome.com/service/the-healthy-home-approach/" class="bg-surface-container-high rounded-2xl p-4 flex flex-col justify-between aspect-square transition-all duration-300 hover:ring-2 hover:ring-primary/20 group">
-                    <span class="material-symbols-outlined text-4xl text-primary">analytics</span>
-                    <div>
-                        <p class="font-bold text-on-surface leading-tight text-sm">Energy Audits</p>
-                        <p class="text-xs text-on-surface-variant mt-0.5">Performance analysis</p>
-                    </div>
-                </a>
-                <a href="https://www.gethealthyhome.com/service/performance-based-air-sealing/" class="bg-secondary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square transition-all duration-300 hover:ring-2 hover:ring-primary/20 group">
-                    <span class="material-symbols-outlined text-4xl text-on-secondary-fixed">air</span>
-                    <p class="font-bold text-on-secondary-fixed leading-tight text-sm">Air Sealing Solutions</p>
-                </a>
-                <a href="https://www.gethealthyhome.com/service-category/insulation-air-sealing/" class="bg-tertiary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square transition-all duration-300 hover:ring-2 hover:ring-primary/20 group">
-                    <span class="material-symbols-outlined text-4xl text-on-tertiary-fixed">thermostat</span>
-                    <p class="font-bold text-on-tertiary-fixed leading-tight text-sm">Thermal Insulation</p>
-                </a>
-                <div class="bg-secondary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square">
-                    <span class="material-symbols-outlined text-4xl text-on-secondary-fixed">hvac</span>
-                    <p class="font-bold text-on-secondary-fixed leading-tight text-sm">Cold Climate Heat Pumps</p>
-                </div>
-                <div class="bg-tertiary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square">
-                    <span class="material-symbols-outlined text-4xl text-on-tertiary-fixed">verified</span>
-                    <p class="font-bold text-on-tertiary-fixed leading-tight text-sm">Healthy Home Comfort Club</p>
-                </div>
-                <div class="bg-tertiary-fixed rounded-2xl p-4 flex flex-col justify-between aspect-square">
-                    <span class="material-symbols-outlined text-4xl text-on-tertiary-fixed">health_and_safety</span>
-                    <div>
-                        <p class="font-bold text-on-tertiary-fixed leading-tight text-sm">Indoor Air Quality</p>
-                        <p class="text-xs text-on-tertiary-fixed/80 mt-0.5">Breathe easier with healthy air</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Connect external JavaScript file routing logic -->
-    <script src="script.js"></script>
-</body>
-</html>
