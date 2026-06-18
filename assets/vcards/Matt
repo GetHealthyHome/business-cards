@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Corning;Matt;;;
+FN:Matt Corning
+ORG:Healthy Home Energy & Consulting, Inc.
+TITLE:Technical Field Manager
+TEL;TYPE=CELL;TYPE=VOICE:329-208-4927
+EMAIL;TYPE=PREF;TYPE=INTERNET:mcorning@gethealthyhome.com
+URL:https://www.gethealthyhome.com
+END:VCARD
