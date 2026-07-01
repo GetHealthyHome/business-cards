@@ -6,7 +6,7 @@ async function loadProfile() {
 
         // Fallback default profile if empty parameter
         if (!username) {
-            username = 'andrew';
+            username = 'ande';
         }
 
         // 2. Fetch data storage file
