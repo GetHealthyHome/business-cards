@@ -90,4 +90,11 @@
     "email": "jintrieri@gethealthyhome.com",
     "vcard": "assets/vcards/juliette.vcf"
   }
+   "taylor": {
+    "name": "Taylor Loucks",
+    "title": "Team Leader",
+    "phone": "607-371-0530",
+    "email": "tloucks@gethealthyhome.com",
+    "vcard": "assets/vcards/taylor.vcf"
+  },
 }
